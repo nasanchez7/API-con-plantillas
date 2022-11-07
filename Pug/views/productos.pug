@@ -1,0 +1,25 @@
+html 
+    head 
+        title="Lista productos"
+
+    body
+
+        header 
+            h1="Lista productos"
+            a(href="/")="Cargar producto"
+        
+        main
+            if productos
+                table 
+                  tr  
+                    th="Producto"
+                    th="Precio"
+                    th="Imagen"      
+                    each producto in productos
+                        tr
+                            th=producto.title 
+                            th=producto.price 
+                            th
+                              img(src=producto.thumbnail, alt=producto.title)
+            else                
+              h2="No hay productos"

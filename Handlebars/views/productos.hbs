@@ -1,0 +1,27 @@
+
+    <header>
+        <h1>Lista productos</h1>
+        <a href="/"> Cargar producto </a>
+    </header>
+    
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+            </tr>
+
+            {{#if productos}}
+                {{#each productos}}
+                    <tr>
+                        <td> {{this.title}} </td>
+                        <td> {{this.price}} </td>
+                        <td><img src={{this.thumbnail}} alt={{this.title}}></td>
+                    </tr>
+                {{/each}}
+            {{/if}}
+
+        </table>
+
+
+

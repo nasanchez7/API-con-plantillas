@@ -1,0 +1,20 @@
+
+    <header>
+        <h1>API Nadir Sanchez</h1>
+    </header>
+
+    <main>
+        <div>
+            <h2>Agregar producto</h2>
+                <form action="http://localhost:8080/api/productos" method="post">
+                    <label for="title">Nombre producto</label> <br><br>
+                    <input type="text" name="title" id="title"> <br><br>
+                    <label for="price">Precio producto</label> <br><br>
+                    <input type="number" name="price" id="price"> <br><br>
+                    <label for="thumbnail"> URL imagen </label> <br><br>
+                    <input type="text" name="thumbnail" id="thumbnail"> <br><br>
+                    <input type="submit" value="Guardar producto">
+                </form>
+        </div>
+        <a href="/api/productos">Ver productos</a>
+    </main>

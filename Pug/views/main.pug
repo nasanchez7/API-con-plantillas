@@ -1,0 +1,32 @@
+html 
+    head
+        title="API Nadir Sanchez"
+    
+    body 
+
+        header  
+            h1="API Nadir Sanchez"
+        
+        main 
+            div 
+                h2="Agregar producto"
+                    form(action="http://localhost:8080/api/productos", method="post")
+                        label(for="title")="Nombre producto"
+                        br
+                        input(type="text", name="title", id="title")
+                        br
+                        br
+                        label(for="price")="Precio producto"
+                        br
+                        input(type="number", name="price", id="price") 
+                        br
+                        br
+                        label(for="thumbnail")="URL imagen"
+                        br
+                        input(type="text", name="thumbnail", id="thumbnail")
+                        br
+                        br
+                        input(type="submit", value="Guardar producto")
+            a(href="/api/productos")="Ver productos"              
+
+

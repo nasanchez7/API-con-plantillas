@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Nadir Sanchez</title>
+</head>
+<body>
+    <header>
+        <h1>Lista productos</h1>
+        <a href="/"> Cargar producto </a>
+    </header>
+    
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+            </tr>
+
+            <% if (productos) { %>
+                <% productos.forEach((producto)=>{ %>
+                    <tr>
+                        <td> <%= producto.title %> </td>
+                        <td> <%= producto.price %> </td>
+                        <td><img src=<%=producto.thumbnail%> alt=<%=producto.title%>></td>
+                    </tr>
+                <% }) %>
+                           
+            <% } %>
+        </table>
+</body>
+</html>
